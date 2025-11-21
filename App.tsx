@@ -1,25 +1,30 @@
 
 import React from 'react';
-import { useDirectoryState } from './hooks/useDirectoryState';
 import { DirectoryTree } from './components/DirectoryTree';
 import { initialData } from './data/initialData';
 import { EntityType } from './types';
 
 const App: React.FC = () => {
-  const { root, addEntity, deleteEntity, updateEntityName } = useDirectoryState(initialData);
+  const root = initialData;
+
+  const addEntity = (parentId: string, type: EntityType, name: string) => {
+    console.log("Functionality disabled");
+  };
+
+  const deleteEntity = (entityId: string) => {
+    console.log("Functionality disabled");
+  };
+
+  const updateEntityName = (entityId: string, newName: string) => {
+    console.log("Functionality disabled");
+  };
 
   const handleAddRootFolder = () => {
-    const folderName = prompt("Enter new folder name:");
-    if (folderName) {
-      addEntity(root.id, EntityType.DIRECTORY, folderName);
-    }
+    console.log("Functionality disabled");
   };
 
   const handleAddRootFile = () => {
-    const fileName = prompt("Enter new file name:");
-    if (fileName) {
-      addEntity(root.id, EntityType.FILE, fileName);
-    }
+    console.log("Functionality disabled");
   };
 
   return (
